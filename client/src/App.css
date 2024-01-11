@@ -1,0 +1,888 @@
+header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: "#fff";
+}
+header nav {
+  margin: 0px auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 1200px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 45px;
+  justify-content: space-between;
+}
+header nav .navRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header nav .navRight .userLoggedIn {
+  position: relative;
+}
+header nav .navRight .userLoggedIn .userImage {
+  width: 48px;
+  height: 48px;
+  margin-left: 2rem;
+  border-radius: 50%;
+  background-color: #e7edf1;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+header nav .navRight .userLoggedIn .userImage img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+header nav .navRight .userLoggedIn .userMenu {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  margin-top: 1rem;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 100;
+  border-radius: 1rem;
+}
+header nav .navRight .userLoggedIn .userMenu .userMenuItems {
+  font-size: 1.4rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+header nav .navRight .userLoggedIn .userMenu .userMenuItems a {
+  text-decoration: none;
+  margin-left: 0;
+}
+header nav .navRight .userLoggedIn .userMenu .userMenuItems h3 {
+  color: rgb(21, 26, 48);
+  font-weight: 300;
+}
+header nav .navRight .userLoggedIn .userMenu .userMenuItems div {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+header nav .navRight .userLoggedIn .userMenu .userMenuItems div:hover {
+  background: rgba(197, 206, 224, 0.24);
+}
+header nav .navRight a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #151A30;
+}
+header nav .navRight a:nth-child(2) {
+  margin-left: 1rem;
+}
+header nav .navRight button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out 0s;
+}
+header nav .navRight .sign_in {
+  background-color: rgba(9, 42, 70, 0.08);
+  color: rgb(9, 42, 70);
+  border: 1px solid rgb(9, 42, 70);
+}
+header nav .navRight .sign_in:hover {
+  background-color: rgba(9, 42, 70, 0.16);
+}
+header nav .navRight .sign_up {
+  background-color: rgb(9, 42, 70);
+  border: 1px solid rgb(9, 42, 70);
+  color: rgb(255, 255, 255);
+}
+header nav .navRight .sign_up:hover {
+  background-color: rgb(66, 92, 113);
+}
+header nav .navLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav .navLeft .navSearch {
+  display: flex;
+  gap: 1.5rem;
+}
+header nav .navLeft .navSearch button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgba(197, 206, 224, 0.08);
+  gap: 0.7rem;
+  padding: 8px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 24px;
+  border: 1px solid rgb(143, 155, 179);
+  font-weight: 700;
+  transition: all 0.2s ease-in-out 0s;
+}
+header nav .navLeft .navSearch button svg {
+  width: 16px;
+  height: auto;
+}
+header nav .navLeft .navSearch button:hover {
+  border-color: rgb(143, 155, 179);
+  background-color: rgba(197, 206, 224, 0.16);
+}
+header nav .navLeft .navSearch .search {
+  padding: 7px 8px;
+  cursor: text;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  border: 1px solid rgb(228, 233, 242);
+  min-height: 40px;
+  width: 264px;
+}
+header nav .navLeft .navSearch .search:hover {
+  background-color: #f6f6f6;
+}
+header nav .navLeft .navSearch .search input {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgb(21, 26, 48);
+  font-size: 1.5rem;
+  line-height: 24px;
+}
+header nav .navLeft .navSearch .search svg {
+  width: 20px;
+  height: auto;
+  color: gray;
+  margin-left: 0.4rem;
+}
+header nav .navLeft .logo {
+  display: flex;
+}
+header nav .navLeft img {
+  width: 43px;
+  height: auto;
+}
+
+/* ===========HomeCSS ============ */
+section {
+  margin: 0px auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 1200px;
+}
+
+/* ===========Courses ============ */
+.courseSection a {
+  text-decoration: none;
+}
+.courseSection h4 {
+  color: rgb(21, 26, 48);
+  font-size: 1.8rem;
+  font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  line-height: 1.33333;
+  margin-bottom: 2rem;
+}
+.courseSection h4 span {
+  width: -moz-max-content;
+  width: max-content;
+  color: rgb(21, 26, 48);
+  background-color: rgb(237, 241, 247);
+  font-size: small;
+  padding: 4px 8px;
+  border-radius: 48px;
+  border-color: rgb(21, 26, 48);
+  margin-left: 1rem;
+}
+.courseSection .courseContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-radius: 1.2rem;
+  transition: all 0.2s ease-in-out 0s;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 3px -1px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.courseSection .courseContainer:hover {
+  background-color: #f6f6f6;
+}
+.courseSection .courseContainer .courseDetails {
+  width: 100%;
+  display: flex;
+  padding: 1.6rem;
+  justify-content: space-between;
+}
+.courseSection .courseContainer .courseDetails .courseRightDetail h5 {
+  color: rgb(21, 26, 48);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo .progress {
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: rgba(197, 206, 224, 0.24);
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo .progress .innerProgress {
+  background-color: #2cba00;
+  height: 100%;
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo h5 {
+  color: rgb(21, 26, 48);
+  font-size: 1.6rem;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo h5 span {
+  color: #8F9BB3;
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo p {
+  color: #2E3A59;
+  font-size: 1.4rem;
+  max-width: 70%;
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseImage {
+  width: 262.4px;
+  height: 100%;
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid #EDF1F7;
+  border: 1px solid rgb(228, 233, 242);
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s ease-in-out 0s;
+}
+.courseSection .courseContainer .courseDetails .courseLeftDetail .courseImage img:hover {
+  transform: scale(1.1);
+}
+
+.heading {
+  text-align: center;
+  padding: 55px 0;
+  width: 100%;
+}
+.heading h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.heading h2 {
+  font-size: 22px;
+  font-weight: 400;
+  padding-top: 15px;
+}
+
+/* ===========courseinfo============ */
+.hide-height {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease !important;
+}
+
+.rotate-360 {
+  transform: rotate(360deg);
+  transition: all 0.2s ease-in;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in;
+}
+
+.show-height {
+  height: 700px;
+  transition: all 0.3s ease !important;
+  overflow: auto;
+}
+
+.infoSection .courseInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar,
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 {
+  margin-top: 2rem;
+  background: rgba(197, 206, 224, 0.24);
+  border-radius: 1.2rem;
+  height: 80px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar:hover,
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2:hover {
+  background: rgba(197, 206, 224, 0.24);
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar .courseBarItem,
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 .courseBarItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft,
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft {
+  display: flex;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft svg,
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft svg {
+  width: 15px;
+  height: 100%;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft > p,
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft > p {
+  font-size: 1.6rem;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft h4,
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft h6,
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft h6 {
+  color: #2E3A59;
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 {
+  margin-top: 0;
+  border-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: #fff;
+  margin-bottom: 0.2rem;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 h4 {
+  font-weight: 200 !important;
+}
+.infoSection .courseInfoContainer .courseInfoLeft .courseBar2 h6 {
+  font-weight: 200 !important;
+}
+.infoSection .courseInfoContainer .courseInfoRight {
+  min-width: 320px;
+  height: 100%;
+  margin-top: 3rem;
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 2rem;
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightLesson {
+  padding: 12px;
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightLesson h6 {
+  margin: 0px 0px 12px;
+  color: rgb(21, 26, 48);
+  font-size: 1.6rem;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  line-height: 1.33333;
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightLesson h6 span {
+  color: #2E3A59;
+  opacity: 0.6;
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightBox {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightBox button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: rgb(9, 42, 70);
+  color: rgb(255, 255, 255);
+  min-width: 40px;
+  min-height: 40px;
+  padding: 12px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 24px;
+  border: 1px solid rgb(9, 42, 70);
+  font-weight: 700;
+  transition: all 0.2s ease-in-out 0s;
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightBox button:hover {
+  border-color: rgb(66, 92, 113);
+  background-color: rgb(66, 92, 113);
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightBox hr {
+  border-width: 0px 0px 1px;
+  border-bottom-style: solid;
+  color: rgb(228, 233, 242);
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightBox .courseInfoThumbnail {
+  width: 290px;
+  height: 100%;
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: flex;
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightBox .courseInfoThumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s ease-in-out 0s;
+}
+.infoSection .courseInfoContainer .courseInfoRight .infoRightBox .courseInfoThumbnail img:hover {
+  transform: scale(1.1);
+}
+.infoSection .courseTag {
+  margin: 3rem 0;
+}
+.infoSection .courseTag p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 1.33333;
+  color: #2E3A59;
+  opacity: 0.8;
+}
+.infoSection .courseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.infoSection .courseDetails h1 {
+  font-size: 3rem;
+}
+.infoSection .courseDetails p {
+  font-size: 1.5rem;
+  color: rgb(21, 26, 48);
+}
+.infoSection .courseDetails h3 {
+  font-size: 2rem;
+}
+
+/*============Login============*/
+.loginContainer {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin-top: 4rem;
+}
+.loginContainer .loginBox {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+.loginContainer .loginBox img {
+  width: 90px;
+  height: 100%;
+}
+.loginContainer .loginBox h1 {
+  font-size: 2.6rem;
+  color: rgb(21, 26, 48);
+}
+.loginContainer .loginBox p {
+  font-size: 1.6rem;
+}
+.loginContainer .loginBox p span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+/* ===========Dashboard============ */
+.dashboard .videoNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 1rem;
+}
+.dashboard .videoNav .completion {
+  font-size: 13px;
+}
+.dashboard .videoNav .inputBox {
+  padding: 7px 8px;
+  cursor: text;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  border: 1px solid rgb(228, 233, 242);
+  min-height: 40px;
+}
+.dashboard .videoNav .inputBox input {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 4px;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  color: rgb(21, 26, 48);
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+.dashboard .videoNav .progressBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.dashboard .videoNav .progress {
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: rgba(197, 206, 224, 0.24);
+  transition: all 0.3s ease;
+}
+.dashboard .videoNav .progress .innerProgress {
+  background-color: #2cba00;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.dashboard .videoNav p {
+  font-size: 16px;
+  color: #2E3A59;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.dashboard .videoNav p span {
+  display: flex;
+  cursor: pointer;
+}
+.dashboard .videoNav p span svg {
+  transition: all 0.2s ease;
+  width: 20px;
+  height: 20px;
+}
+.dashboard .videoNav p span svg:hover {
+  transform: scale(1.2);
+}
+.dashboard .courseInfoLeft {
+  width: 30%;
+  border-left: 2px solid rgba(197, 206, 224, 0.24);
+}
+.dashboard .courseInfoLeft .courseBar,
+.dashboard .courseInfoLeft .courseBar2 {
+  background: rgba(197, 206, 224, 0.24);
+  height: 80px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.dashboard .courseInfoLeft .courseBar:hover,
+.dashboard .courseInfoLeft .courseBar2:hover {
+  background: rgba(197, 206, 224, 0.24);
+}
+.dashboard .courseInfoLeft .courseBar .courseBarItem,
+.dashboard .courseInfoLeft .courseBar2 .courseBarItem {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 1.6rem;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+.dashboard .courseInfoLeft .courseBar .courseBarItem .checkbox,
+.dashboard .courseInfoLeft .courseBar2 .courseBarItem .checkbox {
+  z-index: 1000;
+}
+.dashboard .courseInfoLeft .courseBar .courseBarItem .checkbox input[type=checkbox],
+.dashboard .courseInfoLeft .courseBar2 .courseBarItem .checkbox input[type=checkbox] {
+  margin: 4px 0 0;
+  line-height: normal;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.dashboard .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft,
+.dashboard .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft {
+  display: flex;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+.dashboard .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft svg,
+.dashboard .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft svg {
+  width: 15px;
+  height: 100%;
+}
+.dashboard .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft > p,
+.dashboard .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft > p {
+  font-size: 1.4rem;
+}
+.dashboard .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft h4,
+.dashboard .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.dashboard .courseInfoLeft .courseBar .courseBarItem .courseBarItemLeft h6,
+.dashboard .courseInfoLeft .courseBar2 .courseBarItem .courseBarItemLeft h6 {
+  color: #2E3A59;
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+.dashboard .courseInfoLeft .courseBar2 {
+  margin-top: 0;
+  border-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: #fff;
+  margin-bottom: 0.2rem;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+.dashboard .courseInfoLeft .courseBar2 h4 {
+  font-weight: 200 !important;
+}
+.dashboard .courseInfoLeft .courseBar2 h6 {
+  font-weight: 200 !important;
+}
+.dashboard .dashboard-content {
+  display: flex;
+  width: 100%;
+}
+.dashboard .dashboard-content .videoFrame {
+  width: 70%;
+  overflow: hidden;
+  margin-right: 2rem;
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.dashboard .dashboard-content .videoFrame .video-description {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.dashboard .dashboard-content .videoFrame .video-description p {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(21, 26, 48);
+}
+.dashboard .dashboard-content .videoFrame .video-description h1 {
+  font-size: 30px;
+  color: rgb(21, 26, 48);
+}
+.dashboard .dashboard-content .videoFrame .video-description h6 {
+  font-size: 15px;
+  color: #2E3A59;
+  opacity: 0.6;
+  font-weight: 300;
+}
+.dashboard .dashboard-content .videoFrame .videoPlayer {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16/9 !important;
+  border-radius: 2rem !important;
+}
+
+/* ===========Footer============ */
+footer {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  margin-top: 6rem;
+}
+.footer .main-footer {
+  border-top: 1px solid #e7edf1;
+  position: relative;
+  margin: 0px auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 1200px;
+}
+.footer .main-footer .footer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.footer .main-footer .footer-item .left-footer {
+  display: flex;
+  align-items: center;
+}
+.footer .main-footer .footer-item .left-footer img {
+  width: 43px;
+  height: auto;
+}
+.footer .main-footer .footer-item .left-footer span {
+  padding-left: 2rem;
+  color: #bbc0d1;
+  font-size: 1.4rem;
+}
+.footer .main-footer .footer-item .right-footer {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.footer .main-footer .footer-item .right-footer a {
+  margin-left: 1rem;
+}
+.footer .main-footer .footer-item .right-footer a svg {
+  width: 30px;
+  height: auto;
+  color: #000;
+}
+.footer .main-footer .footer-item .right-footer span {
+  padding-right: 1rem;
+  color: #bbc0d1;
+  font-size: 1.4rem;
+}
+.footer .main-footer .footer-item .right-footer .firstImg {
+  width: 32px !important;
+}
+
+@media (max-width: 930px) {
+  .footer .main-footer .footer-item .left-footer span {
+    display: none;
+  }
+  .dashboard .dashboard-content .videoFrame {
+    width: 60%;
+  }
+  .dashboard .courseInfoLeft {
+    width: 40%;
+  }
+  .heading h1, h2 {
+    margin: 0 2rem;
+  }
+  .courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo p {
+    max-width: 100%;
+  }
+  .heading h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard .dashboard-content .videoFrame {
+    width: 100%;
+  }
+  .dashboard .courseInfoLeft {
+    width: 100%;
+  }
+  .dashboard .dashboard-content {
+    flex-direction: column;
+  }
+  .infoSection .courseInfoContainer {
+    flex-direction: column-reverse;
+  }
+  .infoSection .courseInfoContainer .courseInfoRight .infoRightBox .courseInfoThumbnail {
+    width: 100%;
+  }
+  .infoSection .courseInfoContainer .courseInfoRight .infoRightLesson h6 {
+    font-size: 2.6rem;
+  }
+  header {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 2rem 2rem;
+  }
+  header nav {
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+  }
+  header nav .navLeft {
+    justify-content: space-between;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  header nav .navLeft .navSearch {
+    flex: 1;
+  }
+  header nav .navLeft .navSearch .search {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .courseSection .courseContainer {
+    height: 100%;
+  }
+  .courseSection .courseContainer .courseDetails .courseLeftDetail {
+    flex-direction: column;
+    margin-right: 0;
+  }
+  .courseSection .courseContainer .courseDetails .courseLeftDetail .courseImage {
+    width: 100%;
+  }
+  .courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo h5 {
+    font-size: 2rem;
+  }
+  .courseSection .courseContainer .courseDetails .courseLeftDetail .courseInfo p {
+    font-size: 2rem;
+  }
+  .courseSection .courseContainer .courseDetails .courseRightDetail h5 {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .dashboard .dashboard-content .videoFrame .video-description h1 {
+    font-size: 20px;
+  }
+  .dashboard .dashboard-content .videoFrame .video-description h6 {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=App.css.map */
