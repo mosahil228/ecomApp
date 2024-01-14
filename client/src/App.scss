@@ -145,16 +145,11 @@ header {
                 button {
                     appearance: none;
                     display: flex;
-                    text-align: center;
-                    align-items: center;
-                    text-decoration: none;
-                    background-color: rgba(197, 206, 224, 0.08);
-                    gap: 0.7rem;
-                    padding: 8px 10px;
+                    background: none;
+                    border: none;
+                    gap: 0.9rem;
                     font-size: 12px;
                     cursor: pointer;
-                    border-radius: 24px;
-                    border: 1px solid rgb(143, 155, 179);
                     font-weight: 700;
                     transition: all 0.2s ease-in-out 0s;
 
@@ -170,7 +165,7 @@ header {
                 }
 
                 .search {
-                    padding: 7px 8px;
+                    padding: 3px 8px;
                     cursor: text;
                     display: flex;
                     align-items: center;
@@ -214,7 +209,7 @@ header {
             }
 
             img {
-                width: 43px;
+                width: 150px;
                 height: auto;
             }
         }
@@ -222,141 +217,7 @@ header {
 }
 
 
-/* ===========HomeCSS ============ */
-section {
-    margin: 0px auto;
-    padding-left: 12px;
-    padding-right: 12px;
-    max-width: 1200px;
-}
 
-/* ===========Courses ============ */
-.courseSection {
-    a {
-        text-decoration: none;
-    }
-
-    h4 {
-        color: $text-color_1;
-        font-size: 1.8rem;
-        font-weight: 500;
-        user-select: none;
-        line-height: 1.33333;
-        margin-bottom: 2rem;
-
-        span {
-            width: max-content;
-            color: $text-color_1;
-            background-color: rgb(237, 241, 247);
-            font-size: small;
-            padding: 4px 8px;
-            border-radius: 48px;
-            border-color: rgb(21, 26, 48);
-            margin-left: 1rem;
-        }
-    }
-
-    .courseContainer {
-        width: 100%;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-        border-radius: 1.2rem;
-        transition: all 0.2s ease-in-out 0s;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 3px -1px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-
-
-        &:hover {
-            background-color: #f6f6f6;
-
-        }
-
-        .courseDetails {
-            width: 100%;
-            display: flex;
-            padding: 1.6rem;
-            justify-content: space-between;
-
-            .courseRightDetail {
-                h5 {
-                    color: $text-color_1;
-                    font-size: 1.6rem;
-                    font-weight: 600;
-                }
-            }
-
-            .courseLeftDetail {
-                display: flex;
-                gap: 2rem;
-                width: 100%;
-
-                .courseInfo {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1.2rem;
-                    flex: 1;
-
-                    .progress {
-                        height: 8px;
-                        width: 100%;
-                        overflow: hidden;
-                        border-radius: 1rem;
-                        background-color: $greyHover;
-
-                        .innerProgress {
-                            background-color: #2cba00;
-                            height: 100%;
-                          
-                        }
-                    }
-
-                    h5 {
-                        color: $text-color_1;
-                        font-size: 1.6rem;
-                        font-weight: 600;
-                        user-select: none;
-
-                        span {
-                            color: #8F9BB3;
-                        }
-                    }
-
-                    p {
-                        color: #2E3A59;
-                        font-size: 1.4rem;
-                        max-width: 70%;
-                    }
-                }
-
-
-                .courseImage {
-                    width: 262.4px;
-                    height: 100%;
-                    position: relative;
-                    border-radius: 1.2rem;
-                    overflow: hidden;
-                    border: 1px solid #EDF1F7;
-                    border: 1px solid rgb(228, 233, 242);
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        transition: all 0.5s ease-in-out 0s;
-
-                        &:hover {
-                            transform: scale(1.1);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
-}
 
 .heading {
     text-align: center;
@@ -377,227 +238,16 @@ section {
 }
 
 
-/* ===========courseinfo============ */
-.hide-height {
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease !important;
-}
-
-.rotate-360 {
-    transform: rotate(360deg);
-    transition: all 0.2s ease-in;
-}
-
-.rotate-180 {
-    transform: rotate(180deg);
-    transition: all 0.2s ease-in;
-}
-
-.show-height {
-    height: 700px;
-    transition: all 0.3s ease !important;
-    overflow: auto;
-}
-
-.infoSection {
-
-    .courseInfoContainer {
+/* ==============Dashboard ============= */   
+.dashboard-container{
+    display: flex;
+    width: 100%;
+    .leftMenu{
         display: flex;
-        justify-content: space-between;
-        gap: 3rem;
-
-        .courseInfoLeft {
-
-            .courseBar,
-            .courseBar2 {
-                margin-top: 2rem;
-                background: rgba(197, 206, 224, 0.24);
-                border-radius: 1.2rem;
-                height: 80px;
-                transition: all 0.3s ease;
-                cursor: pointer;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-
-                &:hover {
-                    background: rgba(197, 206, 224, 0.24);
-                }
-
-                .courseBarItem {
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 1.6rem;
-                    align-items: center;
-                    display: flex;
-                    gap: 2rem;
-
-                    .courseBarItemLeft {
-                        display: flex;
-                        align-items: center;
-
-                        svg {
-                            width: 15px;
-                            height: 100%;
-
-                        }
-
-                        display: flex;
-                        gap:2rem;
-
-                        &>p {
-                            font-size: 1.6rem;
-                        }
-
-                        h4 {
-                            font-size: 1.6rem;
-                            font-weight: 600;
-                        }
-
-                        h6 {
-                            color: #2E3A59;
-                            font-size: 1.4rem;
-                            opacity: 0.6;
-                        }
-                    }
-                }
-            }
-
-            .courseBar2 {
-                margin-top: 0;
-                border-radius: 0;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-                background-color: #fff;
-                margin-bottom: .2rem;
-                height: 80px;
-                transition: all 0.3s ease;
-
-                h4 {
-                    font-weight: 200 !important;
-                }
-
-                h6 {
-                    font-weight: 200 !important;
-                }
-
-            }
-
-        }
-
-        .courseInfoRight {
-            min-width: 320px;
-            height: 100%;
-            margin-top: 3rem;
-            background-color: #fff;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            border-radius: 2rem;
-
-            .infoRightLesson {
-                padding: 12px;
-
-                h6 {
-
-                    margin: 0px 0px 12px;
-                    color: rgb(21, 26, 48);
-                    font-size: 1.6rem;
-                    font-weight: 600;
-                    user-select: none;
-                    line-height: 1.33333;
-
-                    span {
-                        color: #2E3A59;
-                        opacity: 0.6;
-                    }
-                }
-            }
-
-            .infoRightBox {
-                padding: 12px;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                gap: 3rem;
-
-                button {
-                    appearance: none;
-                    background-color: rgb(9, 42, 70);
-                    color: rgb(255, 255, 255);
-                    min-width: 40px;
-                    min-height: 40px;
-                    padding: 12px 10px;
-                    font-size: 14px;
-                    cursor: pointer;
-                    border-radius: 24px;
-                    border: 1px solid rgb(9, 42, 70);
-                    font-weight: 700;
-                    transition: all 0.2s ease-in-out 0s;
-
-                    &:hover {
-                        border-color: rgb(66, 92, 113);
-                        background-color: rgb(66, 92, 113);
-                    }
-                }
-
-                hr {
-                    border-width: 0px 0px 1px;
-                    border-bottom-style: solid;
-                    color: rgb(228, 233, 242);
-                }
-
-
-
-                .courseInfoThumbnail {
-                    width: 290px;
-                    height: 100%;
-                    position: relative;
-                    border-radius: 1.2rem;
-                    overflow: hidden;
-                    display: flex;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        transition: all 0.5s ease-in-out 0s;
-
-                        &:hover {
-                            transform: scale(1.1);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .courseTag {
-        margin: 3rem 0;
-
-        p {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            line-height: 1.33333;
-            color: #2E3A59;
-            opacity: 0.8;
-        }
-    }
-
-    .courseDetails {
-        display: flex;
+        gap: 20px;
         flex-direction: column;
-        gap: 1.5rem;
-
-        h1 {
-            font-size: 3rem;
-        }
-
-        p {
-            font-size: 1.5rem;
-            color: $text-color_1;
-        }
-
-        h3 {
-            font-size: 2rem;
-        }
     }
+   
 }
 
 /*============Login============*/
@@ -607,6 +257,114 @@ section {
     justify-content: center;
     display: flex;
     margin-top: 4rem;
+    .container{
+        max-width: 700px;
+        width: 100%;
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+      }
+      .container .title{
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+      }
+      .container .title::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+      }
+      .content form .user-details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+      }
+      form .user-details .input-box{
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+      }
+      form .input-box span.details{
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .user-details .input-box input{
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+      }
+      .user-details .input-box input:focus,
+      .user-details .input-box input:valid{
+        border-color: #9b59b6;
+      }
+       form .gender-details .gender-title{
+        font-size: 20px;
+        font-weight: 500;
+       }
+       form .category{
+         display: flex;
+         width: 80%;
+         margin: 14px 0 ;
+         justify-content: space-between;
+       }
+       form .category label{
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+       }
+       form .category label .dot{
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: #d9d9d9;
+        border: 5px solid transparent;
+        transition: all 0.3s ease;
+      }
+       #dot-1:checked ~ .category label .one,
+       #dot-2:checked ~ .category label .two,
+       #dot-3:checked ~ .category label .three{
+         background: #9b59b6;
+         border-color: #d9d9d9;
+       }
+       form input[type="radio"]{
+         display: none;
+       }
+       form .button{
+         height: 45px;
+         margin: 35px 0
+       }
+       form .button input{
+         height: 100%;
+         width: 100%;
+         border-radius: 5px;
+         border: none;
+         color: #fff;
+         font-size: 18px;
+         font-weight: 500;
+         letter-spacing: 1px;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         background: linear-gradient(135deg, #71b7e6, #9b59b6);
+       }
+       form .button input:hover{
+        /* transform: scale(0.99); */
+        background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+      
 
     .loginBox {
         display: flex;
@@ -635,224 +393,6 @@ section {
     }
 }
 
-/* ===========Dashboard============ */
-.dashboard {
-    .videoNav {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        .completion {
-            font-size: 13px;
-        }
-
-        .inputBox {
-            padding: 7px 8px;
-            cursor: text;
-            background-color: rgb(255, 255, 255);
-            border-radius: 16px;
-            border: 1px solid rgb(228, 233, 242);
-            min-height: 40px;
-
-            input {
-                width: 100%;
-                appearance: none;
-                border-radius: 4px;
-                border: none;
-                background-color: #fff;
-                outline: none;
- 
-                color: rgb(21, 26, 48);
-                font-size: 1.6rem;
-                line-height: 24px;
-            }
-        }
-        .progressBar{
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .progress {
-            height: 8px;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 1rem;
-            background-color: $greyHover;
-            transition: all 0.3s ease;
-
-            .innerProgress {
-                background-color: #2cba00;
-                transition: all 0.3s ease;
-                height: 100%;
-            }
-        }
-
-        margin: 2rem 1rem;
-
-        p {
-            font-size: 16px;
-            color: #2E3A59;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            user-select: none;
-
-            span {
-                display: flex;
-
-                cursor: pointer;
-
-                svg {
-                    transition: all 0.2s ease;
-                    width: 20px;
-                    height: 20px;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-            }
-        }
-    }
-
-    .courseInfoLeft {
-        width: 30%;
-        border-left: 2px solid $greyHover;
-
-        .courseBar,
-        .courseBar2 {
-            background: rgba(197, 206, 224, 0.24);
-            height: 80px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-
-            &:hover {
-                background: rgba(197, 206, 224, 0.24);
-            }
-
-            .courseBarItem {
-                display: flex;
-                height: 100%;
-                justify-content: space-between;
-                padding: 1.6rem;
-                align-items: center;
-                display: flex;
-                gap: 2rem;
-
-                .checkbox {
-                    z-index: 1000;
-
-                    input[type=checkbox] {
-                        margin: 4px 0 0;
-                        line-height: normal;
-                        width: 16px;
-                        height: 16px;
-                        cursor: pointer;
-                    }
-                }
-
-                .courseBarItemLeft {
-                    display: flex;
-                    align-items: center;
-
-                    svg {
-                        width: 15px;
-                        height: 100%;
-
-                    }
-
-                    display: flex;
-                    gap:2rem;
-
-                    &>p {
-                        font-size: 1.4rem;
-                    }
-
-                    h4 {
-                        font-size: 1.4rem;
-                        font-weight: 600;
-                    }
-
-                    h6 {
-                        color: #2E3A59;
-                        font-size: 1.4rem;
-                        opacity: 0.6;
-                    }
-                }
-            }
-        }
-
-        .courseBar2 {
-            margin-top: 0;
-            border-radius: 0;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-            background-color: #fff;
-            margin-bottom: .2rem;
-            height: 80px;
-            transition: all 0.3s ease;
-
-            h4 {
-                font-weight: 200 !important;
-            }
-
-            h6 {
-                font-weight: 200 !important;
-            }
-
-        }
-
-    }
-
-    .dashboard-content {
-        display: flex;
-        width: 100%;
-
-        .videoFrame {
-            width: 70%;
-            overflow: hidden;
-            margin-right: 2rem;
-            position: relative;
-            height: fit-content;
-
-
-            .video-description {
-                margin: 2rem;
-                display: flex;
-                flex-direction: column;
-                gap: 2rem;
-
-                p {
-                    font-size: 16px;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    color: $text-color_1;
-                }
-
-                h1 {
-                    font-size: 30px;
-                    color: $text-color_1;
-                }
-
-                h6 {
-                    font-size: 15px;
-                    color: #2E3A59;
-                    opacity: 0.6;
-                    font-weight: 300;
-                }
-            }
-
-            .videoPlayer {
-                width: 100% !important;
-                height: auto !important;
-                aspect-ratio: 16/9 !important;
-                border-radius: 2rem !important;
-            }
-
-        }
-
-    }
-}
 
 
 
