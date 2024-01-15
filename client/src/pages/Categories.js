@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useCategory from "../hooks/useCategory";
-import { FaTshirt } from "react-icons/fa";
-import { GiRunningShoe } from "react-icons/gi";
-import { BsEarbuds } from "react-icons/bs";
+
 const Categories = () => {
   const categories = useCategory();
   return (
