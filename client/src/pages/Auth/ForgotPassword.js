@@ -1,22 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import { useNavigate} from "react-router-dom";
 
 
-const  ForgotPassword= ({ setProgress }) => {
+const  ForgotPassword= () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
    email: "", newPassword: "",answer:""
   })
 
-  useEffect((() => {
-    setProgress(40);
-    setTimeout(() => {
-      setProgress(100)
-    }, 200)
-
-  }), [setProgress])
+ 
 
   const handleInput = (e) => {
     const name = e.target.name;

@@ -3,19 +3,13 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
-const Signup = ({ setProgress }) => {
+const Signup = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
     firstName: "", lastName: "", email: "", password: "", phone: "", address: "",answer:""
   })
 
-  useEffect((() => {
-    setProgress(40);
-    setTimeout(() => {
-      setProgress(100)
-    }, 200)
-
-  }), [setProgress])
+  
 
   const handleInput = (e) => {
     const name = e.target.name;

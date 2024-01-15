@@ -7,8 +7,8 @@ const Dashboard = () => {
     <div className='dashboard-container'>
     <UserMenu/>
     <div className="sellerDetails">
-        <h1>Seller name : {auth?.user?.first_name + auth?.user?.last_name } </h1>
-        <h1>Seller name : {auth?.user?.email} </h1>    
+        <h1>{auth?.user?.first_name + auth?.user?.last_name } </h1>
+        <h1>{auth?.user?.email} </h1>    
     </div>
 </div>
   )

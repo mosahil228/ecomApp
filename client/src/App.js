@@ -1,12 +1,11 @@
 import './App.css';
-import { useState } from 'react';
+
 import Navbar from './components/Navbar';
 import Login from './pages/Auth/Login';
 import Signup from './pages/Auth/Signup';
 import Home from './pages/Home';
 // import Footer from './components/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import LoadingBar from 'react-top-loading-bar'
 import Cart from './pages/Cart';
 import { Toaster } from 'react-hot-toast';
 import Dashboard from './pages/user/Dashboard';
@@ -25,6 +24,7 @@ import Search from './pages/Search';
 import ProductDetails from './pages/ProductDetails';
 import Categories from './pages/Categories';
 import CategoryProduct from './pages/CategoryProduct';
+import AdminOrders from './pages/Admin/AdminOrders';
 
 
 
@@ -55,6 +55,7 @@ const App = () => {
             <Route path="seller/products" element={<Products/>} />
             <Route path="seller/product/:slug" element={<UpdateProduct />} />
             <Route path="seller/users" element={<Users />} />
+            <Route path="seller/orders" element={<AdminOrders />} />
           </Route>
 
           <Route path="/login" element={<Login />} />

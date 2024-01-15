@@ -1,5 +1,7 @@
 import express from "express";
 import {
+  brainTreePaymentController,
+  braintreeTokenController,
   createProductController,
   deleteProductController,
   getProductController,
@@ -7,6 +9,7 @@ import {
   productCategoryController,
   productCountController,
   productFiltersController,
+  productFiltersControllerbyName,
   productListController,
   productPhotoController,
   realtedProductController,
@@ -49,6 +52,7 @@ router.delete("/delete-product/:pid", deleteProductController);
 
 //filter product
 router.post("/product-filters", productFiltersController);
+router.post("/product-filtersByName", productFiltersControllerbyName);
 
 //product count
 router.get("/product-count", productCountController);
@@ -64,5 +68,13 @@ router.get("/related-product/:pid/:cid", realtedProductController);
 
 //category wise product
 router.get("/product-category/:slug", productCategoryController);
+
+
+//payments routes
+//token
+router.get("/braintree/token", braintreeTokenController);
+
+//payments
+router.post("/braintree/payment", requireSignIn, brainTreePaymentController);
 
 export default router;

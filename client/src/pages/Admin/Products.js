@@ -9,7 +9,7 @@ const Products = () => {
   //getall products
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get( `${process.env.REACT_APP_API}/api/v1/product/get-product`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/get-product`);
       setProducts(data.products);
     } catch (error) {
       console.log(error);
@@ -22,39 +22,41 @@ const Products = () => {
     getAllProducts();
   }, []);
   return (
-  
-      <div className="row">
-        <div className="col-md-3">
-          <AdminMenu />
-        </div>
-        <div className="col-md-9 ">
+
+    <div className="dashboard-container">
+
+      <AdminMenu />
+
+      <div className="create-category create-category2">
+        <div>
           <h1 className="text-center">All Products List</h1>
-          <div className="d-flex">
+          <div className="product-box">
             {products?.map((p) => (
               <Link
                 key={p._id}
                 to={`/dashboard/seller/product/${p.slug}`}
                 className="product-link"
               >
-                <div className="card m-2" style={{ width: "18rem" }}>
+                <div className="card m-2">
                   <img
-                    src={ `${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
+                    src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
-                    width={"200px"}
+                    width={"100%"}
                     height={"auto"}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{p.name}</h5>
-                    <p className="card-text">{p.description}</p>
                   </div>
                 </div>
               </Link>
             ))}
           </div>
         </div>
+
       </div>
- 
+    </div>
+
   );
 };
 

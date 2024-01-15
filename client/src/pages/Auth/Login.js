@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate,useLocation } from "react-router-dom";
 import { useAuth } from '../../context/auth';
 
-const Login = ({ setProgress }) => {
+const Login = () => {
   const navigate = useNavigate();
   const location=useLocation();
   const [userData, setUserData] = useState({
@@ -12,13 +12,7 @@ const Login = ({ setProgress }) => {
   })
   const[auth,setAuth]=useAuth();
 
-  useEffect((() => {
-    setProgress(40);
-    setTimeout(() => {
-      setProgress(100)
-    }, 200)
 
-  }), [setProgress])
 
   const handleInput = (e) => {
     const name = e.target.name;
@@ -76,7 +70,7 @@ const Login = ({ setProgress }) => {
                 <div className="button">
                   <input type="submit" value="Login" />
                 </div>
-                <div className="button" onClick={()=>{navigate('/forgot-password')}} >
+                <div className="button" style={{cursor:"pointer"}} onClick={()=>{navigate('/forgot-password')}} >
                    Forgot password
                 </div>
               </form>

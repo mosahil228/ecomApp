@@ -53,16 +53,15 @@ const Profile = () => {
   };
   return (
 
-      <div className="container-fluid m-3 p-3">
-        <div className="row">
-          <div className="col-md-3">
+      <div className="dashboard-container">
+
             <UserMenu />
-          </div>
-          <div className="col-md-9">
-            <div className="form-container ">
+  
+            <div className="create-category">
+            
               <form onSubmit={handleSubmit}>
-                <h4 className="title">USER PROFILE</h4>
-                <div className="mb-3">
+                <h1 >USER PROFILE</h1>
+                <div className="create-category-form">
                   <input
                     type="text"
                     value={firstName}
@@ -73,7 +72,7 @@ const Profile = () => {
                     autoFocus
                   />
                 </div>
-                <div className="mb-3">
+                <div className="create-category-form">
                   <input
                     type="text"
                     value={lastName}
@@ -84,7 +83,7 @@ const Profile = () => {
                     autoFocus
                   />
                 </div>
-                <div className="mb-3">
+                <div className="create-category-form">
                   <input
                     type="email"
                     value={email}
@@ -95,7 +94,7 @@ const Profile = () => {
                     disabled
                   />
                 </div>
-                <div className="mb-3">
+                <div className="create-category-form">
                   <input
                     type="password"
                     value={password}
@@ -105,7 +104,7 @@ const Profile = () => {
                     placeholder="Enter Your Password"
                   />
                 </div>
-                <div className="mb-3">
+                <div className="create-category-form">
                   <input
                     type="text"
                     value={phone}
@@ -115,7 +114,7 @@ const Profile = () => {
                     placeholder="Enter Your Phone"
                   />
                 </div>
-                <div className="mb-3">
+                <div className="create-category-form">
                   <input
                     type="text"
                     value={address}
@@ -130,9 +129,10 @@ const Profile = () => {
                   UPDATE
                 </button>
               </form>
-            </div>
-          </div>
-        </div>
+              </div>
+        
+       
+        
       </div>
     
   );

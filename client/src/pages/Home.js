@@ -9,11 +9,14 @@ const Home = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
   const [products, setProducts] = useState([]);
+  const [filterProducts, setFilterProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
   const [radio, setRadio] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
+  const [currentpage, setCurrentPage] = useState(1);
+  const [postPerpage, setPostPerPage] = useState(5);
   const [loading, setLoading] = useState(false);
 
   //get all cat
@@ -28,8 +31,21 @@ const Home = () => {
     }
   };
 
+  const getAllProduct = async () => {
+    try {
+      const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/get-product`);
+      if (data && data.products) {
+        setProducts(data.products);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   useEffect(() => {
     getAllCategory();
+    getAllProduct()
     getTotal();
   }, []);
   //get products
@@ -65,12 +81,17 @@ const Home = () => {
       setLoading(true);
       const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`);
       setLoading(false);
-      setProducts([...products, ...data?.products]);
+      setProducts([...data?.products]);
     } catch (error) {
       console.log(error);
       setLoading(false);
     }
   };
+  // get pagination values
+   const selectPageHandler=(selectedPage)=>{
+
+    setPage(selectedPage);
+   }
 
   // filter by cat
   const handleFilter = (value, id) => {
@@ -102,12 +123,18 @@ const Home = () => {
       console.log(error);
     }
   };
+
+  //pagination
+
+
+
+
   return (
 
-    <div className="container-fluid row mt-3">
-      <div className="col-md-2">
-        <h4 className="text-center">Filter By Category</h4>
-        <div className="d-flex flex-column">
+    <div className="home-container">
+      <div className="home-left">
+        <h4 className="heading-filter">Filter By Category</h4>
+        <div className="filter-items">
           {categories?.map((c) => (
             <Checkbox
               key={c._id}
@@ -118,7 +145,7 @@ const Home = () => {
           ))}
         </div>
         {/* price filter */}
-        <h4 className="text-center mt-4">Filter By Price</h4>
+        <h4 className="heading-filter">Filter By Price</h4>
         <div className="d-flex flex-column">
           <Radio.Group onChange={(e) => setRadio(e.target.value)}>
             {Prices?.map((p) => (
@@ -128,7 +155,7 @@ const Home = () => {
             ))}
           </Radio.Group>
         </div>
-        <div className="d-flex flex-column">
+        <div className="reset-btn">
           <button
             className="btn btn-danger"
             onClick={() => window.location.reload()}
@@ -137,36 +164,39 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="col-md-9">
-        <h1 className="text-center">All Products</h1>
-        <div className="d-flex flex-wrap">
-          {products?.map((p) => (
-            <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
-              <img
+      <div className="home-right">
+        <h1 className="heading-filter">All Products</h1>
+        <div className="product-section">
+          {products.slice(page*6-6,page*6).map((p) => (
+            <div className="product-card" key={p._id}>
+              <div className="image-box" onClick={() => navigate(`/product/${p.slug}`)}><img
                 src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top"
                 alt={p.name}
-              />
+              /></div>
+
               <div className="card-body">
                 <h5 className="card-title">{p.name}</h5>
                 <p className="card-text">
                   {p.description.substring(0, 30)}...
                 </p>
-                <p className="card-text"> $ {p.price}</p>
-                <button className="btn btn-primary ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
-                <button className="btn btn-secondary ms-1" onClick={() => {
-                   setCart([...cart, p]);
-                   localStorage.setItem('cart', JSON.stringify([...cart, p]));
-                   toast.success( "Item added to cart")
+                <div className="add-info">
+                  <p className="card-text"> $ {p.price}</p>
+                  <button onClick={() => {
+                    setCart([...cart, p]);
+                    localStorage.setItem('cart', JSON.stringify([...cart, p]));
+                    toast.success("Item added to cart")
 
-                }
-               
-                }>ADD TO CART</button>
+                  }
+
+                  }>ADD TO CART</button>
+                </div>
+
               </div>
             </div>
           ))}
         </div>
-        <div className="m-2 p-3">
+        {/* <div className="m-2 p-3">
           {products && products.length < total && (
             <button
               className="btn btn-warning"
@@ -178,7 +208,21 @@ const Home = () => {
               {loading ? "Loading ..." : "Loadmore"}
             </button>
           )}
-        </div>
+
+        </div> */}
+     {products.length>0&& <div className="pagination">
+      <span onClick={()=>selectPageHandler(page-1)}>Prev</span>
+      {
+        [...Array((Math.ceil(products.length/6)))].map((_,i)=>{
+          return <span className="num" onClick={()=>selectPageHandler(i+1)} key={i}>{i+1}</span>
+        })
+      }
+      <span onClick={()=>selectPageHandler(page+1)}>next</span>
+     </div>}
+
+      </div>
+      <div>
+    
       </div>
     </div>
 

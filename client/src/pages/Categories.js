@@ -1,21 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useCategory from "../hooks/useCategory";
+import { FaTshirt } from "react-icons/fa";
+import { GiRunningShoe } from "react-icons/gi";
+import { BsEarbuds } from "react-icons/bs";
 const Categories = () => {
   const categories = useCategory();
   return (
 
-      <div className="container">
-        <div className="row">
-          {categories.map((c) => (
-            <div className="col-md-6 mt-5 mb-3 gx-3 gy-3" key={c._id}>
-              <Link to={`/category/${c.slug}`} className="btn btn-primary">
+    <div className="home-container">
+      <div className="categories-div">
+        {categories.map((c) => (
+          <Link to={`/category/${c.slug}`} key={c._id} className="btn btn-primary">
+            <div className="categories-box" >
                 {c.name}
-              </Link>
             </div>
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
+    </div>
 
   );
 };

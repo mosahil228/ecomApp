@@ -1,39 +1,49 @@
 import React from "react";
 import { useSearch } from "../context/search";
+import { useNavigate } from "react-router-dom";
+
+
 const Search = () => {
   const [values] = useSearch();
+  const navigate = useNavigate();
   return (
-      <div className="container">
-        <div className="text-center">
-          <h1>Search Resuts</h1>
-          <h6>
+    <div className="container">
+      <div className="home-container">
+        <div className="home-right home-right2">
+          <h1 className="heading-filter">Search Products</h1>
+          <h6 style={{fontSize:"14px",marginBottom:"20px"}}>
             {values?.results.length < 1
               ? "No Products Found"
-              : `Found ${values?.results.length}`}
+              : `Found (${values?.results.length})`}
           </h6>
-          <div className="d-flex flex-wrap mt-4">
+          <div className="product-section">
             {values?.results.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }}>
-                <img
-                  src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
-                  className="card-img-top"
-                  alt={p.name}
-                />
+              <div className="product-card">
+                <div className="image-box" onClick={() => navigate(`/product/${p.slug}`)}>
+                  <img
+                    src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p?._id}`}
+                    className="card-img-top"
+                    alt={p.name}
+                  />
+                </div>
+
                 <div className="card-body">
                   <h5 className="card-title">{p.name}</h5>
-                  <p className="card-text">
-                    {p.description.substring(0, 30)}...
-                  </p>
-                  <p className="card-text"> $ {p.price}</p>
-                  <button class="btn btn-primary ms-1">More Details</button>
-                  <button class="btn btn-secondary ms-1">ADD TO CART</button>
+                  <p className="card-text">{p.description.substring(0, 30)}...</p>
+                  <div className="add-info">
+                    <p className="card-text"> $ {p.price}</p>
+                    <button>ADD TO CART</button>
+                  </div>
+
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
- 
+    </div>
+
+
   );
 };
 
