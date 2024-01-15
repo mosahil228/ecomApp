@@ -13,7 +13,7 @@ MongoDB, Expressjs, React/ContextAPi, Nodejs
 ```terminal
 $ git clone https://github.com/mosahil228/ecomApp.git
 $ git Repo https://github.com/mosahil228/ecomApp
-$ 
+
 ```
 
 # Usage (run Buyer/Seller app on your machine)
@@ -63,18 +63,6 @@ $ npm run server // run it locally
 
 ```
 
-
-
-
-
-# Screenshots of this project
-
-User visit public and Home page
-![User visit public and Home page](http://i.imgur.com/ORCGHHY.png)
-
-
-
-Email Me: amazingandyyy@gmail.com (welcome, say hi)
 
 ## Author
 [mosahil228](https://codewithsahil.netlify.app/)
